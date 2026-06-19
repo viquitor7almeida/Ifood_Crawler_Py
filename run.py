@@ -95,9 +95,9 @@ def main():
     simple_http = SimpleHttpClient()
     crawlers = [flaresolverr, simple_http]
 
-    first_url = next(url_provider.urls(), None)
-    if first_url:
-        warmup(cookie_store, flaresolverr, first_url)
+    logger.info("Priming Flaresolverr browser...")
+    flaresolverr.prime()
+    logger.info("Prime complete")
 
     url_provider = CsvUrlProvider(input_file)
 

@@ -17,34 +17,29 @@ class FlaresolverrClient:
         self.api_url = base_url.rstrip("/") + "/v1"
         self.timeout_s = timeout_s
         self.cookie_store = cookie_store or CookieStore.__new__(CookieStore)
-        self._session_map: dict[str, str] = {}
         self.circuit_breaker = None  # set by orchestrator
 
     @property
     def name(self) -> str:
         return "flaresolverr"
 
+    def prime(self) -> None:
+        """warm up the Flaresolverr browser with a throwaway request (non-iFood)."""
+        try:
+            payload = {"cmd": "request.get", "url": "https://example.com", "maxTimeout": 30000}
+            requests.post(self.api_url, json=payload, timeout=40)
+        except Exception:
+            pass
+
     def fetch(self, url: str) -> Optional[FetchedPage]:
-        tid = id(url)
-        session = self._session_map.get(str(tid))
+        return self._request(url)
 
-        if self.cookie_store.cookies:
-            result = self._request(url, session, with_cookies=True)
-            if result and result.success:
-                return result
-
-        return self._request(url, session, with_cookies=False)
-
-    def _request(self, url: str, session: Optional[str], with_cookies: bool) -> Optional[FetchedPage]:
+    def _request(self, url: str) -> Optional[FetchedPage]:
         payload = {
             "cmd": "request.get",
             "url": url,
             "maxTimeout": self.timeout_s * 1000,
         }
-        if session:
-            payload["session"] = session
-        if with_cookies and self.cookie_store.cookies:
-            payload["cookies"] = self.cookie_store.to_dict_list()
 
         try:
             resp = requests.post(

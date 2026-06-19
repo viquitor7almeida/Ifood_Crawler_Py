@@ -1,0 +1,170 @@
+[
+  {
+    "name": "cf_chl_rc_ni",
+    "value": "1",
+    "domain": "www.ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "afUserId",
+    "value": "b44612d2-d3c1-4325-80fd-50c2bb871d84-p",
+    "domain": ".ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "_pxhd",
+    "value": "3a3e26bcfa960d7b54aa0170dd0ba892f347a0a08aece21f997ac2ab6c3fec5e:6d95a760-6bde-11f1-a7d9-01be4fd18822",
+    "domain": "www.ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "AF_SYNC",
+    "value": "1781873855923",
+    "domain": ".ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "_hjSession_953482",
+    "value": "eyJpZCI6IjcxYWYwYjZjLTExNjEtNDQ1Ni1iYjE4LWM1NzlmNjNhMzJlZiIsImMiOjE3ODE4NzM4Njc0OTIsInMiOjAsInIiOjAsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjoxLCJzcCI6MX0=",
+    "domain": ".ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "fstr.device_id",
+    "value": "MzY5M2VhZmYtNzVmMC00NzBkLWFjOWYtYWRhZWIyYWNkZTRi",
+    "domain": ".www.ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "_fbp",
+    "value": "fb.2.1781873868096.177055546867413034",
+    "domain": ".ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "_px3",
+    "value": "0f159c537f853c6673d5bc6174495a8b390a3556d6fa682e85684e96cd6fee21:MuqmwKhVTsinRw/SshabzTZtFkZd3bzUX8ILM/BagFscgfUw5TnXBd6f0AT3NrwjoXrt5AgxIYpqjmuWT9HXZA==:1000:z9LbudDXhN7i+Dsh8W7VcqMMIT0++je/kemD4oupQ2ODMS9dtAH74j0eXXDW+Q39q3Ny5jDQf9LzZ0p7GXWG7jyO96tnLuID0+a0lAnqA/u4ZtczyfaAsKEdVOJ/8jiXLUD+S5RS7b/ptVEIfPUfS90SPcjaU4XZNhlaXozH+VJJLVVzX3crK8IvJIlh0wFrI/X/1EUI8I7bkpH/85JxVfvNEG3ByXViClnPNfNbE3GPTDGKGY57Io77EtT3HjXcKJZ1c3lONBI6gbG8uGC+G+gLs1PnFOof3lKR1t2sqsAsLubgmxD9AIzk5lPeBX+AKX1lFtTT2/QM6lKEEIFe+HmEXR9l6i/qzTlk5e9nMLRugNpisWmbCplonQNzKIyFuaXJ8oLY52CDML/IipEE+ZSxorj3g6+cBdtPdZETZ6wxatne5t21kXmBLniOST7TUPa5cFfVm3QuHk0d1iGxHA==",
+    "domain": ".ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "_hjSessionUser_953482",
+    "value": "eyJpZCI6ImJjMzgxYzI1LWM2YjItNTc3My04M2Y0LWJmMDE4ZDQzODVmMSIsImNyZWF0ZWQiOjE3ODE4NzM4Njc0ODIsImV4aXN0aW5nIjpmYWxzZX0=",
+    "domain": ".ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "fstr.device_data",
+    "value": "eyJwbGF0Zm9ybSI6IldFQiIsInN5c3RlbSI6IkxpbnV4Iiwic3lzdGVtVmVyc2lvbiI6Ing4Nl82NCIsImFwcFZlcnNpb24iOiI5LjE0Ni4zIiwic2RrVmVyc2lvbiI6IjMuMi45IiwidmVuZG9ySWQiOm51bGwsImFkdmVydGlzaW5nSWQiOm51bGwsInB1c2hUb2tlbiI6bnVsbCwiY2xvdWRJZCI6bnVsbCwiY2FycmllcklkIjpudWxsLCJ0aW1lem9uZSI6IkdNVCswMDAwIiwibGFuZ3VhZ2UiOiJDLlVURi04IiwiaXNOZXdJbnN0YWxsIjp0cnVlLCJwcm9wZXJ0aWVzIjoie1wiYnJvd3Nlck5hbWVcIjpcIkNocm9tZVwiLFwiYnJvd3NlclZlcnNpb25cIjpcIjE0OC4wLjAuMFwifSJ9",
+    "domain": ".www.ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "aSessionId",
+    "value": "5846445b-6772-4bf8-b535-a0d775ba2432",
+    "domain": ".ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "aAppVersion",
+    "value": "9.146.3",
+    "domain": ".ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "_gat",
+    "value": "1",
+    "domain": ".ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "fstr.session",
+    "value": "eyJpZCI6IjU4NDY0NDViLTY3NzItNGJmOC1iNTM1LWEwZDc3NWJhMjQzMiIsImdlb1BvaW50IjpudWxsLCJwcm9wZXJ0aWVzIjp7ImlzX3B3YSI6ZmFsc2UsImluY29nbml0byI6ZmFsc2V9LCJjcmVhdGVkSW5CYWNrZ3JvdW5kIjpmYWxzZSwic3RhcnRlZEF0IjoiMjAyNi0wNi0xOVQxMjo1Nzo0MC45MTBaIiwibnRwU3RhcnRlZEF0IjpudWxsLCJ1cGRhdGVkQXQiOiIyMDI2LTA2LTE5VDEyOjU3OjQzLjYyNloiLCJudHBVcGRhdGVkQXQiOm51bGwsImNsb3NlZCI6ZmFsc2UsInJlbW90ZWx5UGVyc2lzdGVkIjp0cnVlfQ==",
+    "domain": ".www.ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "_ga_23RPNJ8YWK",
+    "value": "GS2.1.s1781873865$o1$g0$t1781873867$j58$l0$h0",
+    "domain": ".ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "_ga_4X9FKLVLYC",
+    "value": "GS2.1.s1781873862$o1$g0$t1781873863$j59$l0$h0",
+    "domain": ".ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "_gid",
+    "value": "GA1.3.651973077.1781873861",
+    "domain": ".ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "__cf_bm",
+    "value": "BWtCfsm2t70jmjZo7cYjunLosRXI41SxpUHoblwbRVo-1781873856.4348986-1.0.1.1-fJ6qLksW6RM6fp7U0UWaR9FRLfdXHxvEkxsCtM9MrrCBsrF2JxqRkCY6lWdFslvBOAf84HlT9TwsPyNuhpFVsJJgi9RrEisJV60dweDM7D6XZWqhQ2hr8VtrVAw4.6Hq",
+    "domain": ".www.ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "cf_clearance",
+    "value": "DcNUwdkOhP2Lmfs1rg4kL7JoTDYeENQFe0_x2VWPmrE-1781873856-1.2.1.1-bmiyT1p5SOY3DtqMz17VeWMQ0Wtxf11ce2JnmHfVNzyWN36CQY7CZTqRB9DGZiznlglzNWiAatM4uOyU7OpbeNLLU53bkFFvd8bp8zjS8AZTMxFeQ0nXTIalTtjGNUEznrdxcWt8wroaPtF0xd0p8zorMZD.5AeEUXpBQiYA7c2Iryi7fupd4afKzvB2gW4o2mYjRw_Jf65hR28pZFBUNpHMJ_wOktHeJmqujsNHc4RK6bPzFhKfjublhVOvICSoeWmFI4orPL0bG7H3gUaaxO0LQFQ7Bos6M1TQdNASlgyRH3RJHkcN6Uhg3iZfakkLuXNPLLmrvOnJrbkf6J4CdGVmfnKofX1nom9sNCDeLz.Wt3R4kuJoF6hRidAfqvP2BCA6Wm0vEmSd8lDSgv5MqBv6qDvaOFXL4.yxBa3q3oClWR1I4SIaDvy_1TmvV.Ol_nHpegzkiX0w_YuN8qzAHTJzyd5Rke5rOT.T71.8LbON4_OkEmMGN5ssWxcIn58v",
+    "domain": ".www.ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "_pxvid",
+    "value": "73073eac-6bde-11f1-984f-d9b7a5ca6e7d",
+    "domain": ".ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "fstr.checkpoint",
+    "value": "MjAyNi0wNi0xOVQxMjo1Nzo0MC45MTNa",
+    "domain": ".www.ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "aFasterAppKey",
+    "value": "41a266ee-51b7-4c37-9e9d-5cd331f280d5",
+    "domain": ".ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "_ga",
+    "value": "GA1.1.1662193312.1781873861",
+    "domain": ".ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "_gcl_au",
+    "value": "1.1.2066866766.1781873863",
+    "domain": ".ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "aDeviceId",
+    "value": "3693eaff-75f0-470d-ac9f-adaeb2acde4b",
+    "domain": ".ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "pxcts",
+    "value": "/HdGD33wCA51QC9/T89dBn2NV4yTbh0FDvFuXcOOU1A=:JwyIsPbvW0zfrZWj/WgseYS7Uv0NGK0mYMTZfb84iRYNA5rmKf2pq1x-oZxSbZd0v-miglDXIqSUAFPO8jBKnkzkyHy5wD/iKaSy/EUztDQDixkYMZ1J8Mkd3XY87dRoXFL4o3IQ0H-P8r20UNdiwIWOlIHMcArSR2YEFx2Urj1HmPZy4qel4AIIEgeLWBbN",
+    "domain": ".ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "fstr.device_persisted",
+    "value": "dHJ1ZQ==",
+    "domain": ".www.ifood.com.br",
+    "path": "/"
+  },
+  {
+    "name": "aFasterAppId",
+    "value": "PmOj44vc0wC2mftPKeY2q3nd",
+    "domain": ".ifood.com.br",
+    "path": "/"
+  }
+]

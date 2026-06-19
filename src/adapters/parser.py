@@ -103,7 +103,6 @@ class ProductParser:
             soup.select_one("[data-testid='product-title']")
             or soup.select_one("[data-testid='item-name']")
             or soup.select_one("[data-testid='dish-name']")
-            or soup.select_one("h1")
         )
         if not title_el:
             return None
@@ -129,8 +128,6 @@ class ProductParser:
             discount_price = self._parse_price(discount_el.get_text(strip=True))
 
         return self._build(title, normal_price, discount_price, soup)
-
-    # ── meta tags ────────────────────────────────────────────
 
     def _from_meta(self, html: str) -> Optional[ProductData]:
         soup = BeautifulSoup(html, "html.parser")
@@ -161,8 +158,6 @@ class ProductParser:
 
         return self._build(title, normal_price, discount_price, soup)
 
-    # ── CSS fallback (iFood-specific selectors) ──────────────
-
     def _from_css(self, html: str) -> Optional[ProductData]:
         soup = BeautifulSoup(html, "html.parser")
         title_el = (
@@ -170,7 +165,6 @@ class ProductParser:
             or soup.select_one(".product-title")
             or soup.select_one(".item-title")
             or soup.select_one(".name")
-            or soup.select_one("h1")
         )
         if not title_el:
             return None
@@ -179,7 +173,6 @@ class ProductParser:
         normal_price: Optional[float] = None
         discount_price: Optional[float] = None
 
-        # original price (always present, even when discounted)
         original_el = (
             soup.select_one(".product-card__price--original")
             or soup.select_one(".price-tag")
@@ -190,9 +183,7 @@ class ProductParser:
         if original_el:
             normal_price = self._parse_price(original_el.get_text(strip=True))
 
-        # discount price element — the direct text is the sale price,
-        # it also contains .product-card__price--original as a child.
-        # Use .contents to get only the direct text node, not children.
+        # discount price — try direct element first, then calculate from percentage
         discount_el = soup.select_one(".product-card__price--discount")
         if discount_el:
             direct_text = ""
@@ -204,18 +195,25 @@ class ProductParser:
             else:
                 discount_price = self._parse_price(discount_el.get_text(strip=True))
         else:
-            discount_el = (
-                soup.select_one(".discount-price")
-                or soup.select_one(".promo-price")
-                or soup.select_one(".sale-price")
-                or soup.select_one("[class*=discount]")
-            )
-            if discount_el:
-                discount_price = self._parse_price(discount_el.get_text(strip=True))
+            pct_el = soup.select_one(".product-card__price--discount-percentage")
+            if pct_el and normal_price is not None:
+                pct_text = pct_el.get_text(strip=True).replace("%", "").replace("-", "").replace("+", "")
+                try:
+                    pct = float(pct_text)
+                    discount_price = round(normal_price * (1 - pct / 100), 2)
+                except (ValueError, TypeError):
+                    pass
+            if discount_price is None:
+                discount_el = (
+                    soup.select_one(".discount-price")
+                    or soup.select_one(".promo-price")
+                    or soup.select_one(".sale-price")
+                    or soup.select_one("[class*=discount]")
+                )
+                if discount_el:
+                    discount_price = self._parse_price(discount_el.get_text(strip=True))
 
         return self._build(title, normal_price, discount_price, soup)
-
-    # ── shared ───────────────────────────────────────────────
 
     def _build(
         self, title: Optional[str],
@@ -240,8 +238,6 @@ class ProductParser:
             discount_price=discount_price,
             image_url=image_url,
         )
-
-    # ── price parsing ────────────────────────────────────────
 
     @staticmethod
     def _parse_price(text) -> Optional[float]:

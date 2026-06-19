@@ -177,6 +177,12 @@ class CrawlerOrchestrator:
 
             if page and page.success:
                 product = self.parser.parse(page.html, url)
+                # retry if parser couldn't extract product data
+                if product.is_empty:
+                    last_error = f"Attempt {attempt}: parse returned empty (page={len(page.html)}b)"
+                    if attempt < self.max_retries:
+                        logger.warning("Empty parse on %s, retrying (%d/%d)", url, attempt, self.max_retries)
+                        continue
                 elapsed_ms = int(time.monotonic() * 1000 - start_ms)
                 result = CrawlResult.success(
                     url=url, product=product,
