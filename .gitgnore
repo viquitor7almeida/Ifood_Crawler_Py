@@ -22,20 +22,10 @@ checkpoint.db*
 .classpath
 .project
 
-
 # ============================================
-# ARQUIVOS DO PLAYWRIGHT
-# ============================================
-
-playwright/
-playwright-report/
-test-results/
-
-# ============================================
-# ARQUIVOS DE TESTE E TEMPORÁRIOS
+# Pasta de checkpoints específica
 # ============================================
 
-test.csv
-test_*.csv
-temp-*
-cookies.json
+checkpoints/
+checkpoints/*.db
+checkpoints/*.db-*
