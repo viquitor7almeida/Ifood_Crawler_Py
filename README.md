@@ -80,7 +80,7 @@ CSV → URL Provider → [Worker Pool] → Fallback Chain → Parser → SQLite 
 - [x] Warmup de cookies via Flaresolverr
 - [x] Fallback chain: Flaresolverr (cookies) → Flaresolverr (raw) → SimpleHTTP
 
-### Diferenciais (Nota 10)
+### Diferenciais
 - [x] **Circuit Breaker** — Crawlers falhos são isolados automaticamente
 - [x] **Graceful Shutdown** — SIGTERM/SIGINT finalizam requisições em andamento
 - [x] **Métricas detalhadas** — Média, mediana, P95, min, max por URL
@@ -88,7 +88,6 @@ CSV → URL Provider → [Worker Pool] → Fallback Chain → Parser → SQLite 
 - [x] **Logging estruturado** — JSON logs para integração com ferramentas (Datadog, ELK)
 - [x] **Rich CLI** — Progress bars, tabelas formatadas, cores
 - [x] **Pre-commit hooks** — ruff, formatação, segurança
-- [x] **CI/CD** — GitHub Actions (lint, test, docker build)
 - [x] **Makefile** — Comandos padronizados
 - [x] **Suporte a preços com desconto** — `discount_price` via JSON-LD, data-testid, meta tags
 - [x] **User-Agent rotation** — Evita fingerprinting básico
@@ -339,21 +338,6 @@ open htmlcov/index.html
 - Orquestrador: retry com sucesso, falha total
 - Circuit Breaker: abertura, recuperação half-open
 - Modelos: output dict formatado conforme especificação
-
----
-
-## CI/CD
-
-O pipeline de CI (GitHub Actions) executa em todo push/PR:
-
-1. **Lint** — ruff check + format
-2. **Test** — pytest com cobertura (mínimo 70%)
-3. **Docker** — Build da imagem
-
-Para configurar no seu repositório:
-1. Push para GitHub
-2. Ative GitHub Actions nas configurações do repo
-3. O workflow em `.github/workflows/ci.yml` será executado automaticamente
 
 ---
 
