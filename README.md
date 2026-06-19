@@ -1,9 +1,5 @@
 # iFood Product Crawler
 
-[![CI](https://github.com/your-org/ifood-crawler/actions/workflows/ci.yml/badge.svg)](https://github.com/your-org/ifood-crawler/actions/workflows/ci.yml)
-
-Crawler escalável para extrair dados de produtos do iFood. Processa **1.000+ URLs** com **≥95% de sucesso**, atravessando Cloudflare Under Attack Mode via **Flaresolverr** (Chromium headless).
-
 ---
 
 
@@ -199,7 +195,7 @@ Cada tentativa (até `max_retries`) percorre a cadeia:
    - Raramente funciona (TLS fingerprint não corresponde ao Chromium)
    - Usado como último recurso
 
-### Estratégia para 95% de Sucesso
+### Estratégia
 
 | Técnica | Impacto |
 |---|---|
@@ -260,32 +256,6 @@ Com `structlog`, os logs são emitidos como JSON quando não está em terminal i
 - URLs recuperadas (sucesso em tentativa > 1)
 - Estatísticas por crawler
 - Checkpoints a cada 50 URLs
-
-### Relatório de Execução
-
-Ao final, um relatório é gerado em `output/execution_report.txt`:
-
-```
-============================================================
-  RELATORIO DE EXECUCAO
-============================================================
-  Total URLs:       1000
-  Sucesso:          963
-  Erros:            37
-  Taxa sucesso:     96.3%
-  Recuperadas:      42
-  Duracao total:    1080s
-  Media/URL:        1080ms
-  Mediana:          890ms
-  P95:              3200ms
-  Mais rapida:      180ms
-  Mais lenta:       45000ms
-  ──────────────────────────────────────────────────────────
-  Crawlers:
-    flaresolverr     1000 calls  963 OK   37 fail  96.3%
-    simple-http        37 calls    0 OK   37 fail   0.0%
-============================================================
-```
 
 ---
 

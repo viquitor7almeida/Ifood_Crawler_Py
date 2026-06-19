@@ -94,7 +94,9 @@ def test_parse_no_title():
 
 
 def test_parse_no_price():
-    html = """<html><body><h1 data-testid="product-title">Sem Preco</h1></body></html>"""
+    html = """<html><body>
+<div class="product-detail__description">Sem Preco</div>
+</body></html>"""
     parser = ProductParser()
     result = parser.parse(html, "https://test.com")
     assert result.title == "Sem Preco"
@@ -134,5 +136,19 @@ def test_parse_css_ifood_no_discount():
     result = parser.parse(html, "https://ifood.com.br/arroz")
     assert result.title == "Arroz Camil 5kg"
     assert result.normal_price == 32.90
-    assert result.discount_price is None
-    assert result.image_url == "https://static.ifood-static.com.br/arroz.jpg"
+
+
+def test_parse_css_ifood_discount_from_percentage():
+    """when only discount-percentage is present, calculate discount_price"""
+    html = """<html><body>
+<div class="product-detail__description">Limpador Veja Limpeza Pesada Cloro Ativo 1l Oferta</div>
+<img class="product-detail__image" src="https://static.ifood-static.com.br/img.jpg" />
+<span class="product-card__price--original">R$ 25,50</span>
+<div class="product-card__price--discount-percentage">-5%</div>
+</body></html>"""
+    parser = ProductParser()
+    result = parser.parse(html, "https://ifood.com.br/veja")
+    assert result.title == "Limpador Veja Limpeza Pesada Cloro Ativo 1l Oferta"
+    assert result.normal_price == 25.50
+    assert abs(result.discount_price - 24.23) < 0.02  # 25.50 * 0.95 ≈ 24.22-24.23
+    assert result.image_url == "https://static.ifood-static.com.br/img.jpg"

@@ -2,18 +2,19 @@
 ============================================================
   RELATORIO DE EXECUCAO
 ============================================================
-  Total URLs:       27
-  Sucesso:          27
-  Erros:            0
-  Taxa sucesso:     100.0%
-  Recuperadas:      0
-  Duracao total:    292.9s
-  Media/URL:        21526.6ms
-  Mediana:          20807ms
-  P95:              25673ms
-  Mais rapida:      17832ms
-  Mais lenta:       25772ms
+  Total URLs:       999
+  Sucesso:          81
+  Erros:            918
+  Taxa sucesso:     8.1%
+  Recuperadas:      65
+  Duracao total:    2310.9s
+  Media/URL:        4615.5ms
+  Mediana:          390ms
+  P95:              34500ms
+  Mais rapida:      182ms
+  Mais lenta:       228238ms
   ──────────────────────────────────────────────────────────
   Crawlers:
-    flaresolverr            27 calls    27 OK     0 fail  100.0%
+    flaresolverr            81 calls    81 OK     0 fail  100.0%
+    all_failed             918 calls     0 OK   918 fail    0.0%
 ============================================================
