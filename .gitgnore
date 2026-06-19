@@ -1,0 +1,41 @@
+# ============================================
+# BANCOS DE DADOS E CHECKPOINTS
+# ============================================
+
+# SQLite
+*.db
+*.db.backup
+*.db-wal
+*.db-shm
+checkpoint.db*
+*.sqlite
+
+# ============================================
+# ARQUIVOS DE IDE E EDITOR
+# ============================================
+
+
+# VS Code
+.vscode/
+*.code-workspace
+.settings/
+.classpath
+.project
+
+
+# ============================================
+# ARQUIVOS DO PLAYWRIGHT
+# ============================================
+
+playwright/
+playwright-report/
+test-results/
+
+# ============================================
+# ARQUIVOS DE TESTE E TEMPORÁRIOS
+# ============================================
+
+test.csv
+test_*.csv
+temp-*
+cookies.json

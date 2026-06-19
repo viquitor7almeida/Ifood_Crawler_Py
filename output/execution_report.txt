@@ -1,0 +1,19 @@
+
+============================================================
+  RELATORIO DE EXECUCAO
+============================================================
+  Total URLs:       27
+  Sucesso:          27
+  Erros:            0
+  Taxa sucesso:     100.0%
+  Recuperadas:      0
+  Duracao total:    292.9s
+  Media/URL:        21526.6ms
+  Mediana:          20807ms
+  P95:              25673ms
+  Mais rapida:      17832ms
+  Mais lenta:       25772ms
+  ──────────────────────────────────────────────────────────
+  Crawlers:
+    flaresolverr            27 calls    27 OK     0 fail  100.0%
+============================================================

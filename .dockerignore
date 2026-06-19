@@ -1,0 +1,14 @@
+__pycache__
+*.pyc
+.pytest_cache
+.git
+.gitignore
+.env
+.env.*
+*.md
+.DS_Store
+output/
+checkpoints/
+cookies/
+htmlcov/
+.coverage
